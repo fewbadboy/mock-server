@@ -1,0 +1,30 @@
+{
+  "name": "mock-server",
+  "version": "1.0.0",
+  "description": "mock response",
+  "main": "index.js",
+  "scripts": {
+    "server": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fewbadboy/mock-server.git"
+  },
+  "keywords": [
+    "mock",
+    "response"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fewbadboy/mock-server/issues"
+  },
+  "homepage": "https://github.com/fewbadboy/mock-server#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mockjs": "^1.1.0"
+  }
+}
