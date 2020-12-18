@@ -1,9 +1,9 @@
 let Mock = require('mockjs')
 let { timeout } = require('../settings')
 
-Mock.setup({
-  timeout
-})
+// Mock.setup({
+//   timeout
+// })
 
 // 返回字符的随机线程池
 const pool = {
@@ -16,29 +16,29 @@ const pool = {
 let user = Mock.mock({
   'data|10-15': [{
     'id|+1': 1,
-    'name': '@first @middle @last',
-    'cname': '@cfirst @cmiddle @clast',
+    'name': '@first @last',
+    'cname': '@cfirst @clast',
     'email': '@email',
-    'web': {
-      'boolean': '@boolean(1,3,true)',
-      'natural': '@natural(0, 100)',
-      'integer': '@integer(-100, 100)',
-      'float': '@float(-100, 100, 2, 3)',
-      'character': `@character(${ plool })`,
-      'string': `@string(${ pool }, 4, 6)`,
-      'range': '@range(1, 10, 2)',
-      'data': '@data',
+    'attr': {
+      'boolean': '@boolean',
+      'natural': '@natural',
+      'integer': '@integer',
+      'float': '@float',
+      'character': '@character',
+      'string': '@string',
+      'range': '@range',
+      'date': '@date',
       'time': '@time',
-      'datatime': '@datatime',
+      'datetime': '@datetime',
       'now': '@now',
       'color': '@color',
       'image': '@image',
-      'image1': '@dataImage',
+      // 'image1': '@dataImage',
       'url': '@url',
       'domain': '@domain',
       'ip': '@ip',
       'tld': '@tld',
-      'area': '@area',
+      'county': '@county(true)',
       'region': '@region',
       'id': '@id',
       'guid': '@guid',
@@ -50,8 +50,7 @@ let user = Mock.mock({
       'csentence': '@csentence',
       'cword': '@cword',
       'ctitle': '@ctitle'
-    },
-    'mark': /\d{5, 10}/
+    }
   }]
 })
 

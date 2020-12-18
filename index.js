@@ -7,11 +7,13 @@ const app = express()
 
 app.use(cors())
 app.use(cookieParser())
-app.get('/load', function(req,res, next){
+app.get('/load/:user', function(req,res, next){
  console.log('hello world')
  next()
 }, function(req,res){
-  res.json(user)
+  res.json({
+    user
+  })
 })
 
 app.listen(2020)
